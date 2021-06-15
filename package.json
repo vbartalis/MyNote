@@ -1,11 +1,10 @@
 {
   "name": "angular-electron",
-  "version": "10.0.0",
+  "version": "0.0.0",
   "description": "Angular 12 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "vbartalis",
+    "email": "vbartalis@gmail.com"
   },
   "keywords": [
     "angular",
