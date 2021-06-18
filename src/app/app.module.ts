@@ -6,12 +6,13 @@ import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
 import { AppRoutingModule } from "./app-routing.module";
 
-
+import { AppLayoutComponent } from "./layout/app-layout/app-layout.component";
+import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 
 import { AppComponent } from "./app.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppLayoutComponent, AppComponent, SidebarComponent, ],
   imports: [
     BrowserModule,
     HttpClientModule,
