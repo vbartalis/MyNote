@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [PageNotFoundComponent,],
-  imports: [CommonModule, FormsModule, NgbModule,],
-  exports: [CommonModule, FormsModule, NgbModule, PageNotFoundComponent,]
+  declarations: [PageNotFoundComponent],
+  imports: [CommonModule, FormsModule, NgbModule],
+  exports: [CommonModule, FormsModule, NgbModule, PageNotFoundComponent],
 })
 export class SharedModule {}

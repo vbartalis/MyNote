@@ -4,12 +4,10 @@ import { AppConfig } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
-  constructor(
-    private electronService: ElectronService,
-  ) {
+  constructor(private electronService: ElectronService) {
     console.log('AppConfig', AppConfig);
 
     if (electronService.isElectron) {

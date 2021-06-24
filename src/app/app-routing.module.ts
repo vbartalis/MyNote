@@ -3,12 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
 import { PageNotFoundComponent } from './shared/components';
 
-
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
@@ -17,24 +16,22 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'home',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'home',
         loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
       },
-    ]
+    ],
   },
   {
     path: '**',
-    component: PageNotFoundComponent
-  }
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-  ],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
