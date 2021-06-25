@@ -67,7 +67,7 @@
       }
     },
     {
-      "files": ["*.component.html"],
+      "files": ["*.html"],
       "parser": "@angular-eslint/template-parser",
       "plugins": ["@angular-eslint/template", "prettier"],
       "rules": {
