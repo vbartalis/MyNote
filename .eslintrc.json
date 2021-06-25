@@ -1,21 +1,13 @@
 {
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-    "es2017": true
-  },
+  "root": true,
+  "ignorePatterns": [
+    "app/**/*", // ignore nodeJs files
+    "dist/**/*",
+    "release/**/*"
+  ],
   "overrides": [
     {
       "files": ["*.ts"],
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "prettier"
-      ],
-      "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": 10,
         "project": [
@@ -29,6 +21,13 @@
           "modules": true
         }
       },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier"
+      ],
       "plugins": ["@typescript-eslint", "@angular-eslint/eslint-plugin", "prettier"],
       "rules": {
         "@typescript-eslint/indent": [
@@ -68,13 +67,9 @@
     },
     {
       "files": ["*.html"],
-      "parser": "@angular-eslint/template-parser",
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "plugins": ["@angular-eslint/template", "prettier"],
-      "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
-        "@angular-eslint/template/no-negated-async": "error",
-        "prettier/prettier": "error"
-      }
+      "rules": {}
     }
   ]
 }
